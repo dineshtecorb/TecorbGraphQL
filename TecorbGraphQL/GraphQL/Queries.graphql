@@ -1,0 +1,75 @@
+
+    mutation SignIn($input: SignIn!) {
+        signIn(input: $input) {
+          user{
+               id
+               email
+               }
+               auth {
+                   authenticationToken
+               }
+      }
+    }
+    
+    query FetchCalendarEvents($page: Int!, $parkId: ID!) {
+        fetchCalendarEvents(page:$page,parkId:$parkId){
+    eve {
+    allDayStatus
+    createdAt
+    createdBy
+    createdEmail
+    createdTimezone
+    description
+    endDate
+    endTime
+    eventDate
+    eventName
+    eventType
+    id
+    startTime
+    updatedAt
+    park {
+      id
+      address
+      name
+      timezone
+      state
+    }
+    }
+      date
+    }
+    }
+    
+        fragment Eve on eve {
+      allDayStatus
+      createdAt
+      createdBy
+      createdEmail
+      createdTimezone
+      description
+      endDate
+      endTime
+      eventDate
+      eventName
+      eventType
+      id
+      startTime
+      updatedAt
+      park {
+        id
+        address
+        name
+        timezone
+        state
+      }
+    }
+
+input SearchListingsInput {
+  checkInDate: String!
+  checkOutDate: String!
+  numOfBeds: Int
+  page: Int
+  limit: Int
+  sortBy: SortByCriteria # this is an enum type
+}
+

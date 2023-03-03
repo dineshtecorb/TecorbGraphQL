@@ -1,0 +1,34 @@
+PODS:
+  - Apollo (0.53.0):
+    - Apollo/Core (= 0.53.0)
+  - Apollo/Core (0.53.0)
+  - Apollo/SQLite (0.53.0):
+    - Apollo/Core
+    - SQLite.swift (~> 0.13.1)
+  - Apollo/WebSocket (0.53.0):
+    - Apollo/Core
+  - SQLite.swift (0.13.3):
+    - SQLite.swift/standard (= 0.13.3)
+  - SQLite.swift/standard (0.13.3)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - Apollo (= 0.53.0)
+  - Apollo/SQLite
+  - Apollo/WebSocket
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Apollo
+    - SQLite.swift
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Apollo: 204819ea82022fbc59ad05056820df867f19bd02
+  SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 350dcfe3b98212f33fa8b31e43793baa15b38721
+
+COCOAPODS: 1.11.3

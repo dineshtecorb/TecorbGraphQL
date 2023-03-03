@@ -3,20 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61780ABD29B07458008D2BB4 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 61780ABC29B07458008D2BB4 /* schema.json */; };
 		617C551B29AE114B0088C411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C551A29AE114B0088C411 /* AppDelegate.swift */; };
 		617C551D29AE114B0088C411 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C551C29AE114B0088C411 /* SceneDelegate.swift */; };
 		617C551F29AE114B0088C411 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C551E29AE114B0088C411 /* ViewController.swift */; };
 		617C552229AE114B0088C411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617C552029AE114B0088C411 /* Main.storyboard */; };
 		617C552429AE114C0088C411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617C552329AE114C0088C411 /* Assets.xcassets */; };
 		617C552729AE114C0088C411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617C552529AE114C0088C411 /* LaunchScreen.storyboard */; };
+		617C554629AE18240088C411 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C554229AE18240088C411 /* Apollo.swift */; };
+		617C554729AE18240088C411 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 617C554329AE18240088C411 /* Queries.graphql */; };
+		617C554829AE18240088C411 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C554429AE18240088C411 /* API.swift */; };
+		C8EF2C24F58E938A6A811D09 /* Pods_TecorbGraphQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98D0864C42F87474F55D968 /* Pods_TecorbGraphQL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		617C551729AE114B0088C411 /* TecorbGraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TecorbGraphQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1244878B5D3A7888B1400690 /* Pods-TecorbGraphQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TecorbGraphQL.release.xcconfig"; path = "Target Support Files/Pods-TecorbGraphQL/Pods-TecorbGraphQL.release.xcconfig"; sourceTree = "<group>"; };
+		61780ABC29B07458008D2BB4 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		617C551A29AE114B0088C411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		617C551C29AE114B0088C411 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		617C551E29AE114B0088C411 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,12 @@
 		617C552329AE114C0088C411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		617C552629AE114C0088C411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		617C552829AE114C0088C411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		617C554229AE18240088C411 /* Apollo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		617C554329AE18240088C411 /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		617C554429AE18240088C411 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		6182338629AF71B000DF733D /* TecorbGraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TecorbGraphQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C51AA56922C6369EB03A3E3 /* Pods-TecorbGraphQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TecorbGraphQL.debug.xcconfig"; path = "Target Support Files/Pods-TecorbGraphQL/Pods-TecorbGraphQL.debug.xcconfig"; sourceTree = "<group>"; };
+		F98D0864C42F87474F55D968 /* Pods_TecorbGraphQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TecorbGraphQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,26 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8EF2C24F58E938A6A811D09 /* Pods_TecorbGraphQL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59B7F22DC5A8E25BC12FF060 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C51AA56922C6369EB03A3E3 /* Pods-TecorbGraphQL.debug.xcconfig */,
+				1244878B5D3A7888B1400690 /* Pods-TecorbGraphQL.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		617C550E29AE114B0088C411 = {
 			isa = PBXGroup;
 			children = (
 				617C551929AE114B0088C411 /* TecorbGraphQL */,
-				617C551829AE114B0088C411 /* Products */,
+				59B7F22DC5A8E25BC12FF060 /* Pods */,
+				EB31633FBCD1DBA6A9815F51 /* Frameworks */,
+				6182338629AF71B000DF733D /* TecorbGraphQL.app */,
 			);
-			sourceTree = "<group>";
-		};
-		617C551829AE114B0088C411 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				617C551729AE114B0088C411 /* TecorbGraphQL.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		617C551929AE114B0088C411 /* TecorbGraphQL */ = {
@@ -59,12 +75,32 @@
 				617C551A29AE114B0088C411 /* AppDelegate.swift */,
 				617C551C29AE114B0088C411 /* SceneDelegate.swift */,
 				617C551E29AE114B0088C411 /* ViewController.swift */,
+				617C554129AE18240088C411 /* GraphQL */,
 				617C552029AE114B0088C411 /* Main.storyboard */,
 				617C552329AE114C0088C411 /* Assets.xcassets */,
 				617C552529AE114C0088C411 /* LaunchScreen.storyboard */,
 				617C552829AE114C0088C411 /* Info.plist */,
 			);
 			path = TecorbGraphQL;
+			sourceTree = "<group>";
+		};
+		617C554129AE18240088C411 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				617C554229AE18240088C411 /* Apollo.swift */,
+				617C554329AE18240088C411 /* Queries.graphql */,
+				61780ABC29B07458008D2BB4 /* schema.json */,
+				617C554429AE18240088C411 /* API.swift */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		EB31633FBCD1DBA6A9815F51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F98D0864C42F87474F55D968 /* Pods_TecorbGraphQL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 617C552B29AE114C0088C411 /* Build configuration list for PBXNativeTarget "TecorbGraphQL" */;
 			buildPhases = (
+				F5AA5A7F0B28B00D00441944 /* [CP] Check Pods Manifest.lock */,
 				617C551329AE114B0088C411 /* Sources */,
 				617C551429AE114B0088C411 /* Frameworks */,
 				617C551529AE114B0088C411 /* Resources */,
+				B3B36DA81E5441E90679EA7B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -84,7 +122,7 @@
 			);
 			name = TecorbGraphQL;
 			productName = TecorbGraphQL;
-			productReference = 617C551729AE114B0088C411 /* TecorbGraphQL.app */;
+			productReference = 6182338629AF71B000DF733D /* TecorbGraphQL.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +141,7 @@
 				};
 			};
 			buildConfigurationList = 617C551229AE114B0088C411 /* Build configuration list for PBXProject "TecorbGraphQL" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,7 +149,7 @@
 				Base,
 			);
 			mainGroup = 617C550E29AE114B0088C411;
-			productRefGroup = 617C551829AE114B0088C411 /* Products */;
+			productRefGroup = 617C550E29AE114B0088C411;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -125,6 +163,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617C554729AE18240088C411 /* Queries.graphql in Resources */,
+				61780ABD29B07458008D2BB4 /* schema.json in Resources */,
 				617C552729AE114C0088C411 /* LaunchScreen.storyboard in Resources */,
 				617C552429AE114C0088C411 /* Assets.xcassets in Resources */,
 				617C552229AE114B0088C411 /* Main.storyboard in Resources */,
@@ -133,6 +173,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B3B36DA81E5441E90679EA7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TecorbGraphQL/Pods-TecorbGraphQL-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TecorbGraphQL/Pods-TecorbGraphQL-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TecorbGraphQL/Pods-TecorbGraphQL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5AA5A7F0B28B00D00441944 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TecorbGraphQL-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		617C551329AE114B0088C411 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +222,9 @@
 			files = (
 				617C551F29AE114B0088C411 /* ViewController.swift in Sources */,
 				617C551B29AE114B0088C411 /* AppDelegate.swift in Sources */,
+				617C554629AE18240088C411 /* Apollo.swift in Sources */,
 				617C551D29AE114B0088C411 /* SceneDelegate.swift in Sources */,
+				617C554829AE18240088C411 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +366,7 @@
 		};
 		617C552C29AE114C0088C411 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C51AA56922C6369EB03A3E3 /* Pods-TecorbGraphQL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +395,7 @@
 		};
 		617C552D29AE114C0088C411 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1244878B5D3A7888B1400690 /* Pods-TecorbGraphQL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
