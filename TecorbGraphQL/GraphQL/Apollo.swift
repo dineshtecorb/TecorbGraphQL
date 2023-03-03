@@ -17,18 +17,3 @@ class Network {
         
     }
 }
-
-
-
-
-//mutation SignIn($input: {$email: String!,$password:String!,$deviceToken:String!,$deviceOS:String!,$deviceModel:String!,$timezone:String!}) {
-//    signIn(input:$Input){
-//          user{
-//               id
-//               email
-//               }
-//               auth {
-//                   authenticationToken
-//               }
-//      }
-//}

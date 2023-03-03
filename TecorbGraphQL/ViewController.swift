@@ -68,49 +68,29 @@ class ViewController: UIViewController {
         param.updateValue("Asia/Calcutta", forKey: "timezone")
 
 
-        Network.shared.apollo.perform(mutation: UserSigninQuery(input: param.jsonObject)){result in
-            
-            switch result{
-                
-            case .success(let graphResult):
-                print("Result detail is \(graphResult)")
-                if let userData = graphResult.data?.userDetails{
-                    DispatchQueue.main.async {
-                        print("user detail is \(userData)")
-                    }
-                }
-                if let authData = graphResult.data?.authDetails{
-                    DispatchQueue.main.async {
-                        print("user detail is \(authData)")
-                    }
-                }
-
-            case .failure(let error):
-                print("Find error from in response \(error)")
-            }
-            
-        }
-     /*   Network.shared.apollo.perform(mutation: UserSigninQuery(email: "admin@example.com", password: "password", deviceToken: "fYjM0A9lm0MQlelUoEk97Q:APA91bEaeJlD_4BOcI1pxVhSFH4-XQW8iRgNkGMj-tAX0mvshLE8Ie01QsIl8aFWroRd8SdNodbsXfM3BJ8w1Fn-mdp74c6c1iTTOKQuaw8V1TsmRdXaOf7SZSLHgQEAUWCp9wBdg9A0", deviceOS: "iOS", deviceModel: "iPhone 8", timeZone: "Asia/Kolkata")){result in
-            
-            switch result{
-                
-            case .success(let graphResult):
-                print("Result detail is \(graphResult)")
-                if let userData = graphResult.data?.userDetails{
-                    DispatchQueue.main.async {
-                        print("user detail is \(userData)")
-                    }
-                }
+//        Network.shared.apollo.perform(mutation: UserSigninQuery(input: param.jsonObject)){result in
+//
+//            switch result{
+//
+//            case .success(let graphResult):
+//                print("Result detail is \(graphResult)")
+//                if let userData = graphResult.data?.userDetails{
+//                    DispatchQueue.main.async {
+//                        print("user detail is \(userData)")
+//                    }
+//                }
 //                if let authData = graphResult.data?.authDetails{
 //                    DispatchQueue.main.async {
 //                        print("user detail is \(authData)")
 //                    }
 //                }
-
-            case .failure(let error):
-                print("Find error from in response \(error)")
-            }
-        }*/
+//
+//            case .failure(let error):
+//                print("Find error from in response \(error)")
+//            }
+//
+//        }
+    
 
     }
 
