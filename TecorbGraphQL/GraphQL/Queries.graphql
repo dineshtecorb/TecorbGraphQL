@@ -40,29 +40,6 @@
     }
     }
     
-        fragment Eve on eve {
-      allDayStatus
-      createdAt
-      createdBy
-      createdEmail
-      createdTimezone
-      description
-      endDate
-      endTime
-      eventDate
-      eventName
-      eventType
-      id
-      startTime
-      updatedAt
-      park {
-        id
-        address
-        name
-        timezone
-        state
-      }
-    }
 
 input SearchListingsInput {
   checkInDate: String!
