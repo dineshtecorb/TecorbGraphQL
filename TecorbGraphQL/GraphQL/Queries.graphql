@@ -1,6 +1,6 @@
 
     mutation SignIn($input: SignIn!) {
-        signIn(input: $input) {
+    signIn(input: $input) {
           user{
                id
                email
@@ -40,13 +40,3 @@
     }
     }
     
-
-input SearchListingsInput {
-  checkInDate: String!
-  checkOutDate: String!
-  numOfBeds: Int
-  page: Int
-  limit: Int
-  sortBy: SortByCriteria # this is an enum type
-}
-

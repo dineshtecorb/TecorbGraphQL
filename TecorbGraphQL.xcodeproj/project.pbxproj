@@ -17,6 +17,7 @@
 		617C554629AE18240088C411 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C554229AE18240088C411 /* Apollo.swift */; };
 		617C554729AE18240088C411 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 617C554329AE18240088C411 /* Queries.graphql */; };
 		617C554829AE18240088C411 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C554429AE18240088C411 /* API.swift */; };
+		6180DBD329B5B2BD00341C75 /* LoginWithGraphQLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6180DBD229B5B2BD00341C75 /* LoginWithGraphQLViewController.swift */; };
 		C8EF2C24F58E938A6A811D09 /* Pods_TecorbGraphQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98D0864C42F87474F55D968 /* Pods_TecorbGraphQL.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		617C554229AE18240088C411 /* Apollo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		617C554329AE18240088C411 /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		617C554429AE18240088C411 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		6180DBD229B5B2BD00341C75 /* LoginWithGraphQLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGraphQLViewController.swift; sourceTree = "<group>"; };
 		6182338629AF71B000DF733D /* TecorbGraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TecorbGraphQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C51AA56922C6369EB03A3E3 /* Pods-TecorbGraphQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TecorbGraphQL.debug.xcconfig"; path = "Target Support Files/Pods-TecorbGraphQL/Pods-TecorbGraphQL.debug.xcconfig"; sourceTree = "<group>"; };
 		F98D0864C42F87474F55D968 /* Pods_TecorbGraphQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TecorbGraphQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 				617C552329AE114C0088C411 /* Assets.xcassets */,
 				617C552529AE114C0088C411 /* LaunchScreen.storyboard */,
 				617C552829AE114C0088C411 /* Info.plist */,
+				6180DBD229B5B2BD00341C75 /* LoginWithGraphQLViewController.swift */,
 			);
 			path = TecorbGraphQL;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				617C551B29AE114B0088C411 /* AppDelegate.swift in Sources */,
 				617C554629AE18240088C411 /* Apollo.swift in Sources */,
 				617C551D29AE114B0088C411 /* SceneDelegate.swift in Sources */,
+				6180DBD329B5B2BD00341C75 /* LoginWithGraphQLViewController.swift in Sources */,
 				617C554829AE18240088C411 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

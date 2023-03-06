@@ -9,7 +9,7 @@ target 'TecorbGraphQL' do
   pod "Apollo",'0.53.0'
   pod "Apollo/SQLite"
   pod "Apollo/WebSocket"
-  pod 'SwiftyJSON'
+  pod 'IQKeyboardManagerSwift'
 
 
 end

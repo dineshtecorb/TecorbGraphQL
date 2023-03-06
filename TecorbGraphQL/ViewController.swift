@@ -7,19 +7,15 @@
 
 import UIKit
 import Apollo
-import SwiftyJSON
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView:UITableView!
     
     var contacts: [LoadParkListQuery.Data.FetchCalendarEvents]? {
         didSet {
-           // guard let contact = contacts else {return}
-           // print("loading data: \(contact)")
-           // tableView.reloadData()
+            tableView.reloadData()
         }
     }
-//
     
     var watcher: GraphQLQueryWatcher<LoadParkListQuery>?
 
@@ -30,7 +26,6 @@ class ViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.reloadData()
         self.loadQuery()
-        
         // Do any additional setup after loading the view.
     }
     
@@ -45,55 +40,13 @@ class ViewController: UIViewController {
                         self.contacts = graphResult
                         self.tableView.reloadData()
                     }
-                    //let json = JSON(graphResult)
-                    //print("loading data: \(json)")
                 }
-
-               // self.contacts = newResult.data?.allContacts
             case .failure(let error):
                 print("Error loading contacts: \(error.localizedDescription)")
             }
         })
     }
     
-    // MARK: - Load Data
-    
-    func loadData() {
-        var param = Dictionary<String,String>()
-        param.updateValue("admin@example.com", forKey: "email")
-        param.updateValue("password", forKey: "password")
-        param.updateValue("fYjM0A9lm0MQlelUoEk97Q:APA91bEaeJlD_4BOcI1pxVhSFH4-XQW8iRgNkGMj-tAX0mvshLE8Ie01QsIl8aFWroRd8SdNodbsXfM3BJ8w1Fn-mdp74c6c1iTTOKQuaw8V1TsmRdXaOf7SZSLHgQEAUWCp9wBdg9A0", forKey: "deviceToken")
-        param.updateValue("IOS", forKey: "deviceOs")
-        param.updateValue("iPhone 8", forKey: "deviceModel")
-        param.updateValue("Asia/Calcutta", forKey: "timezone")
-
-
-//        Network.shared.apollo.perform(mutation: UserSigninQuery(input: param.jsonObject)){result in
-//
-//            switch result{
-//
-//            case .success(let graphResult):
-//                print("Result detail is \(graphResult)")
-//                if let userData = graphResult.data?.userDetails{
-//                    DispatchQueue.main.async {
-//                        print("user detail is \(userData)")
-//                    }
-//                }
-//                if let authData = graphResult.data?.authDetails{
-//                    DispatchQueue.main.async {
-//                        print("user detail is \(authData)")
-//                    }
-//                }
-//
-//            case .failure(let error):
-//                print("Find error from in response \(error)")
-//            }
-//
-//        }
-    
-
-    }
-
 
 }
 
