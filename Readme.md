@@ -81,7 +81,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 ```
  public final class UserSigninMutation: GraphQLMutation {
-    /// The raw GraphQL definition of this operation.
+    // The raw GraphQL definition of this operation.
     public let operationDefinition =
     """
     mutation SignIn($input: SignIn!) {
