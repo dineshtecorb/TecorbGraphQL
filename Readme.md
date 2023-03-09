@@ -75,7 +75,6 @@ Mutation In Graphql
 ```public final class UserSigninMutation: GraphQLMutation{
 
     public let operationDefinition =
-    """
     mutation SignIn($input: SignIn!) {
     signIn(input: $input) {
     __typename
@@ -90,8 +89,6 @@ Mutation In Graphql
                }
       }
     }
-    """
-        
     public let operationName = "SignIn"
     
     public var inputs: Dictionary<String,Any>
