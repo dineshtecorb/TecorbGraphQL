@@ -285,7 +285,6 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
         }
     }
 }
-
 ```
 
 
