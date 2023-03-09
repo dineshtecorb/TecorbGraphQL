@@ -42,7 +42,7 @@ class ViewController: UIViewController {
                     }
                 }
             case .failure(let error):
-                print("Error loading contacts: \(error.localizedDescription)")
+                print("Error loading Park event: \(error.localizedDescription)")
             }
         })
     }

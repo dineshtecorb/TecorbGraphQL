@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		615AE68529B9E5BE008C5E7A /* Graphql.text in Resources */ = {isa = PBXBuildFile; fileRef = 615AE68429B9E5BE008C5E7A /* Graphql.text */; };
 		61780ABD29B07458008D2BB4 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 61780ABC29B07458008D2BB4 /* schema.json */; };
 		617C551B29AE114B0088C411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C551A29AE114B0088C411 /* AppDelegate.swift */; };
 		617C551D29AE114B0088C411 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C551C29AE114B0088C411 /* SceneDelegate.swift */; };
@@ -23,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		1244878B5D3A7888B1400690 /* Pods-TecorbGraphQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TecorbGraphQL.release.xcconfig"; path = "Target Support Files/Pods-TecorbGraphQL/Pods-TecorbGraphQL.release.xcconfig"; sourceTree = "<group>"; };
+		615AE68229B9AD55008C5E7A /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		615AE68429B9E5BE008C5E7A /* Graphql.text */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Graphql.text; sourceTree = "<group>"; };
 		61780ABC29B07458008D2BB4 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		617C551A29AE114B0088C411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		617C551C29AE114B0088C411 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,9 +64,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		615AE68329B9E576008C5E7A /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				615AE68429B9E5BE008C5E7A /* Graphql.text */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
 		617C550E29AE114B0088C411 = {
 			isa = PBXGroup;
 			children = (
+				615AE68329B9E576008C5E7A /* Documentation */,
+				615AE68229B9AD55008C5E7A /* Readme.md */,
 				617C551929AE114B0088C411 /* TecorbGraphQL */,
 				59B7F22DC5A8E25BC12FF060 /* Pods */,
 				EB31633FBCD1DBA6A9815F51 /* Frameworks */,
@@ -166,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				615AE68529B9E5BE008C5E7A /* Graphql.text in Resources */,
 				617C554729AE18240088C411 /* Queries.graphql in Resources */,
 				61780ABD29B07458008D2BB4 /* schema.json in Resources */,
 				617C552729AE114C0088C411 /* LaunchScreen.storyboard in Resources */,

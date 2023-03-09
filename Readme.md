@@ -1,8 +1,70 @@
-// @generated
-//  This file was automatically generated and should not be edited.
+# TecorbGraphQL
+GraphQL  API Mutation and query by Swift
 
-import Apollo
-import Foundation
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)]
+[![iOS](https://img.shields.io/badge/Platform-iOS-purpel.svg?style=flat)](https://developer.apple.com/ios/)
+
+[![Swift 5](https://img.shields.io/badge/Swift-5.7-orange.svg?style=flat)](https://developer.apple.com/swift/)
+
+[![GraphQL](https://img.shields.io/badge/GraphQL-purple.svg?style=flat)](https://graphql.org/)
+
+## Requirements
+
+pod 'Apollo' 
+
+pod "Apollo/SQLite"
+
+pod "Apollo/WebSocket" 
+
+or 
+
+install Apollo using swift package manager
+Apollo swift package : https://github.com/apollographql/apollo-ios.git
+
+## Installation
+
+#### Manually
+1. Install apollo pods or install apollo swift package
+
+2. Add your GraphQL scema.json file and API end point URL in your project.
+
+   Download Schema with the help of CLI
+    ## How to download schema
+    a. Install npm 
+    b. Create graphql schema (sudo npm install -g get-graphql-schema)
+    c. Download schema with (get-graphql-schema (endpoint url) --json)
+    d. Download schema with filename (get-graphql-schema (endpoint url) --json > schema.json)
+
+3. Create queries and migrations in .graphql files (add empty file in project with .graphql extension)
+
+4. Create API.swift file (for write Mutation and Query in this file)
+
+5. Add global Apollo intasnce for application
+   or Create a sperate file for Apollo instance
+    
+6. Call Apollo methods in ViewController
+
+
+## How To Implement Mutation Type In Graphql
+
+  Write mutation for input type
+
+    /** Mutation In Graphql **/
+    
+    mutation SignIn($input: SignIn!) {
+    signIn(input: $input) {
+          user{
+               id
+               email
+               }
+               auth {
+                   authenticationToken
+               }
+      }
+    }
+    
+/** Write Mutation Api for Graphql **/ 
 
 
 public final class UserSigninMutation: GraphQLMutation {
@@ -224,6 +286,64 @@ public final class UserSigninMutation: GraphQLMutation {
         }
     }
 }
+
+
+
+/** Mutation Api call for Graphql request data response in ViewController  **/ 
+
+    var param = Dictionary<String,String>()
+        Network.shared.apollo.perform(mutation: UserSigninMutation(input: param.jsonObject)){result in
+
+            switch result{
+
+            case .success(let graphResult):
+                if let userData = graphResult.data?.signDetail{
+                    print("user detail is \(userData)")
+
+                }
+            case .failure(let error):
+                print("Find error from GraphQL \(error)")
+            }
+
+        }
+
+
+## How To Implement Query Type In Graphql
+
+  Write query for Graphql
+
+    /** Query In Graphql **/
+    
+    query FetchCalendarEvents($page: Int!, $parkId: ID!) {
+        fetchCalendarEvents(page:$page,parkId:$parkId){
+    eve {
+    allDayStatus
+    createdAt
+    createdBy
+    createdEmail
+    createdTimezone
+    description
+    endDate
+    endTime
+    eventDate
+    eventName
+    eventType
+    id
+    startTime
+    updatedAt
+    park {
+      id
+      address
+      name
+      timezone
+      state
+    }
+    }
+      date
+    }
+    }
+    
+/** Write Query Api for Graphql **/ 
 
 
 public final class LoadParkListQuery: GraphQLQuery {
@@ -620,6 +740,24 @@ public final class LoadParkListQuery: GraphQLQuery {
     }
   }
 }
+
+
+/** Mutation Api call for Graphql request data response in ViewController  **/ 
+
+    Network.shared.apollo.watch(query: LoadParkListQuery(page: 1, parkID: "1"), resultHandler: { result in
+            switch result {
+            case .success(let newResult):
+                if let graphResult = newResult.data?.caldendarEvents{
+                print("Graph query result api response : \(graphResult)")
+ 
+                }
+            case .failure(let error):
+                print("Error loading Park event: \(error.localizedDescription)")
+            }
+        })
+
+
+
 
 
 

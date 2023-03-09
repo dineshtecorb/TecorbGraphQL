@@ -64,7 +64,7 @@ class LoginWithGraphQLViewController: UIViewController {
         param.updateValue("Asia/Calcutta", forKey: "timezone")
 
 
-        Network.shared.apollo.perform(mutation: UserSigninQuery(input: param.jsonObject)){result in
+        Network.shared.apollo.perform(mutation: UserSigninMutation(input: param.jsonObject)){result in
 
             switch result{
 
