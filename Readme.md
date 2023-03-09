@@ -55,9 +55,9 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 ## How To Implement Mutation Type In Graphql
 
+ /** Mutation In Graphql **/
   Write mutation for input type
 
-    /** Mutation In Graphql **/
     
    ``` 
    mutation SignIn($input: SignIn!) {
@@ -297,6 +297,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 
 /** Mutation Api call for Graphql request data response in ViewController  **/ 
+
 ```
     var param = Dictionary<String,String>()
         Network.shared.apollo.perform(mutation: UserSigninMutation(input: param.jsonObject)){result in
@@ -318,9 +319,10 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 ## How To Implement Query Type In Graphql
 
+ /** Query In Graphql **/
+ 
   Write query for Graphql
-
-    /** Query In Graphql **/
+   
 ```    
     query FetchCalendarEvents($page: Int!, $parkId: ID!) {
         fetchCalendarEvents(page:$page,parkId:$parkId){
