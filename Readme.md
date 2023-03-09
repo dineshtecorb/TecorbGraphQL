@@ -55,7 +55,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 ## How To Implement Mutation Type In Graphql
 
-    /** Mutation In Graphql **/
+Mutation In Graphql
 
   Write mutation for input type
 ``` mutation SignIn($input: SignIn!) {
@@ -71,10 +71,8 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
     }
 ```
  Write Mutation Api for Graphql
- 
-``` 
-public final class UserSigninMutation: GraphQLMutation{
-    // The raw GraphQL definition of this operation.
+
+```public final class UserSigninMutation: GraphQLMutation{
     public let operationDefinition =
     """
     mutation SignIn($input: SignIn!) {
@@ -290,7 +288,7 @@ public final class UserSigninMutation: GraphQLMutation{
 ```
 
 
-/** Mutation Api call for Graphql request data response in ViewController  **/ 
+ Mutation Api call for Graphql request data response in ViewController
 
 ```var param = Dictionary<String,String>()
         Network.shared.apollo.perform(mutation: UserSigninMutation(input: param.jsonObject)){result in
@@ -312,7 +310,7 @@ public final class UserSigninMutation: GraphQLMutation{
 
 ## How To Implement Query Type In Graphql
 
- /** Query In Graphql **/
+  Query In Graphql
  
   Write query for Graphql
    
@@ -346,10 +344,9 @@ public final class UserSigninMutation: GraphQLMutation{
     }
     
  ```   
-/** Write Query Api for Graphql **/ 
+Write Query Api for Graphql
 
 ```public final class LoadParkListQuery: GraphQLQuery {
-    // The raw GraphQL definition of this operation.
 
     public let operationDefinition =
       """
@@ -740,7 +737,7 @@ public final class UserSigninMutation: GraphQLMutation{
 }
 ```
 
-/** Mutation Api call for Graphql request data response in ViewController  **/ 
+ Mutation Api call for Graphql request data response in ViewController
 
 ```Network.shared.apollo.watch(query: LoadParkListQuery(page: 1, parkID: "1"), resultHandler: { result in
             switch result {
