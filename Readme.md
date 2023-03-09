@@ -60,8 +60,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
   Write mutation for input type
 
     
-   ``` 
-   mutation SignIn($input: SignIn!) {
+   ``` mutation SignIn($input: SignIn!) {
     signIn(input: $input) {
           user{
                id
@@ -74,13 +73,9 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
     }
     
     ```
- 
- 
-    
 /** Write Mutation Api for Graphql **/ 
 
-```
- public final class UserSigninMutation: GraphQLMutation {
+```public final class UserSigninMutation: GraphQLMutation {
     // The raw GraphQL definition of this operation.
     public let operationDefinition =
     """
@@ -301,8 +296,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 /** Mutation Api call for Graphql request data response in ViewController  **/ 
 
-```
-    var param = Dictionary<String,String>()
+```var param = Dictionary<String,String>()
         Network.shared.apollo.perform(mutation: UserSigninMutation(input: param.jsonObject)){result in
 
             switch result{
@@ -326,8 +320,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
  
   Write query for Graphql
    
-```    
-    query FetchCalendarEvents($page: Int!, $parkId: ID!) {
+```query FetchCalendarEvents($page: Int!, $parkId: ID!) {
         fetchCalendarEvents(page:$page,parkId:$parkId){
     eve {
     allDayStatus
@@ -359,8 +352,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
  ```   
 /** Write Query Api for Graphql **/ 
 
-```
-public final class LoadParkListQuery: GraphQLQuery {
+```public final class LoadParkListQuery: GraphQLQuery {
     // The raw GraphQL definition of this operation.
 
     public let operationDefinition =
@@ -750,13 +742,11 @@ public final class LoadParkListQuery: GraphQLQuery {
     }
   }
 }
-
 ```
 
 /** Mutation Api call for Graphql request data response in ViewController  **/ 
 
-```
-    Network.shared.apollo.watch(query: LoadParkListQuery(page: 1, parkID: "1"), resultHandler: { result in
+```Network.shared.apollo.watch(query: LoadParkListQuery(page: 1, parkID: "1"), resultHandler: { result in
             switch result {
             case .success(let newResult):
                 if let graphResult = newResult.data?.caldendarEvents{
