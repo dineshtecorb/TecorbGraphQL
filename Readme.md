@@ -68,7 +68,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 
 public final class UserSigninMutation: GraphQLMutation {
-    /// The raw GraphQL definition of this operation.
+    // The raw GraphQL definition of this operation.
     
     
     public let operationDefinition =
@@ -347,7 +347,9 @@ public final class UserSigninMutation: GraphQLMutation {
 
 
 public final class LoadParkListQuery: GraphQLQuery {
-    /// The raw GraphQL definition of this operation.
+
+    // The raw GraphQL definition of this operation.
+
     public let operationDefinition =
       """
       query FetchCalendarEvents($page: Int!, $parkId: ID!) {
@@ -387,8 +389,6 @@ public final class LoadParkListQuery: GraphQLQuery {
       
       public var page:Int
       public var parkID:GraphQLID
-
-    //public var queryDocument: String { return operationDefinition.appending(ContactDetails.fragmentDefinition) }
 
       public init(page:Int,parkID:GraphQLID) {
           self.page = page
