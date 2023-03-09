@@ -2,7 +2,7 @@
 GraphQL  API Mutation and query by Swift
 
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)]
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)
 [![iOS](https://img.shields.io/badge/Platform-iOS-purpel.svg?style=flat)](https://developer.apple.com/ios/)
 
 [![Swift 5](https://img.shields.io/badge/Swift-5.7-orange.svg?style=flat)](https://developer.apple.com/swift/)
@@ -20,6 +20,8 @@ pod "Apollo/WebSocket"
 or 
 
 install Apollo using swift package manager
+
+/** Add Apollo manger **/
 Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 ## Installation
@@ -66,9 +68,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
     
 /** Write Mutation Api for Graphql **/ 
 
-
 public final class UserSigninMutation: GraphQLMutation {
-    // The raw GraphQL definition of this operation.
     
     
     public let operationDefinition =
@@ -186,7 +186,6 @@ public final class UserSigninMutation: GraphQLMutation {
                 public static let selections: [GraphQLSelection] = [
                     GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
                     GraphQLField("id", type: .scalar(String.self)),
-                 //   GraphQLField("name", type: .scalar(String.self)),
                     GraphQLField("email", type: .scalar(String.self)),
                 ]
                 
@@ -242,7 +241,6 @@ public final class UserSigninMutation: GraphQLMutation {
                 
                 public static let selections: [GraphQLSelection] = [
                     GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-                 //   GraphQLField("id", type: .scalar(String.self)),
                     GraphQLField("authenticationToken", type: .scalar(String.self)),
                 ]
                 
@@ -345,10 +343,9 @@ public final class UserSigninMutation: GraphQLMutation {
     
 /** Write Query Api for Graphql **/ 
 
+    // The raw GraphQL definition of this operation.
 
 public final class LoadParkListQuery: GraphQLQuery {
-
-    // The raw GraphQL definition of this operation.
 
     public let operationDefinition =
       """
@@ -435,7 +432,6 @@ public final class LoadParkListQuery: GraphQLQuery {
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("date", type: .nonNull(.scalar(String.self))),
           GraphQLField("eve", type: .nonNull(.object(Eevents.selections)))
-          //GraphQLField("states", type: .nonNull(.list(.nonNull(.object(State.selections))))),
         ]
       }
 
@@ -490,7 +486,6 @@ public final class LoadParkListQuery: GraphQLQuery {
                     GraphQLField("createdEmail", type: .nonNull(.scalar(String.self))),
                     GraphQLField("createdTimezone", type: .nonNull(.scalar(String.self))),
                     GraphQLField("description", type: .nonNull(.scalar(String.self))),
-                   //  GraphQLField("endDate", type: .nonNull(.scalar(String.self))),
                     GraphQLField("endTime", type: .nonNull(.scalar(String.self))),
                     GraphQLField("eventDate", type: .nonNull(.scalar(String.self))),
                     GraphQLField("eventName", type: .nonNull(.scalar(String.self))),
@@ -498,7 +493,6 @@ public final class LoadParkListQuery: GraphQLQuery {
                     GraphQLField("startTime", type: .nonNull(.scalar(String.self))),
                     GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
                     GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
-                 //   GraphQLField("park", type: .nonNull(.object(Park.selections)))
                 ]
             }
             
