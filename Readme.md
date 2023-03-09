@@ -59,7 +59,8 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
     /** Mutation In Graphql **/
     
-   ``` mutation SignIn($input: SignIn!) {
+   ``` 
+   mutation SignIn($input: SignIn!) {
     signIn(input: $input) {
           user{
                id
@@ -70,11 +71,13 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
                }
       }
     }
+    
     ```
     
 /** Write Mutation Api for Graphql **/ 
 
-``` public final class UserSigninMutation: GraphQLMutation {
+```
+ public final class UserSigninMutation: GraphQLMutation {
     /// The raw GraphQL definition of this operation.
     public let operationDefinition =
     """
@@ -289,6 +292,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
         }
     }
 }
+
 ```
 
 
@@ -309,6 +313,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
             }
 
         }
+
 ```
 
 ## How To Implement Query Type In Graphql
@@ -345,6 +350,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
       date
     }
     }
+    
  ```   
 /** Write Query Api for Graphql **/ 
 
@@ -739,6 +745,7 @@ public final class LoadParkListQuery: GraphQLQuery {
     }
   }
 }
+
 ```
 
 /** Mutation Api call for Graphql request data response in ViewController  **/ 
@@ -755,6 +762,7 @@ public final class LoadParkListQuery: GraphQLQuery {
                 print("Error loading Park event: \(error.localizedDescription)")
             }
         })
+        
 ```
 
 
