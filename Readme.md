@@ -346,7 +346,8 @@ Mutation In Graphql
  ```   
 Write Query Api for Graphql
 
-```public final class LoadParkListQuery: GraphQLQuery {
+```
+    public final class LoadParkListQuery: GraphQLQuery {
 
     public let operationDefinition =
       """
