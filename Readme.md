@@ -55,7 +55,8 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 ## How To Implement Mutation Type In Graphql
 
- /** Mutation In Graphql **/
+    /** Mutation In Graphql **/
+
   Write mutation for input type
 
     
@@ -73,6 +74,8 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
     }
     
     ```
+ 
+ 
     
 /** Write Mutation Api for Graphql **/ 
 
