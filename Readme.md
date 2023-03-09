@@ -59,7 +59,6 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
   Write mutation for input type
 
-    
    ``` mutation SignIn($input: SignIn!) {
     signIn(input: $input) {
           user{
@@ -71,7 +70,6 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
                }
       }
     }
-    
     ```
 /** Write Mutation Api for Graphql **/ 
 
@@ -94,8 +92,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
       }
     }
     """
-    
-    
+        
     public let operationName = "SignIn"
     
     public var inputs: Dictionary<String,Any>
