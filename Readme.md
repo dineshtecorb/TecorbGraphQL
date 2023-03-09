@@ -3,6 +3,7 @@ GraphQL  API Mutation and query by Swift
 
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)]()
+
 [![iOS](https://img.shields.io/badge/Platform-iOS-purpel.svg?style=flat)](https://developer.apple.com/ios/)
 
 [![Swift 5](https://img.shields.io/badge/Swift-5.7-orange.svg?style=flat)](https://developer.apple.com/swift/)
@@ -22,6 +23,7 @@ or
 install Apollo using swift package manager
 
 /** Add Apollo manger **/
+
 Apollo swift package : https://github.com/apollographql/apollo-ios.git
 
 ## Installation
@@ -32,10 +34,15 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 2. Add your GraphQL scema.json file and API end point URL in your project.
 
    Download Schema with the help of CLI
+   
     ## How to download schema
+    
     a. Install npm 
+    
     b. Create graphql schema (sudo npm install -g get-graphql-schema)
+    
     c. Download schema with (get-graphql-schema (endpoint url) --json)
+    
     d. Download schema with filename (get-graphql-schema (endpoint url) --json > schema.json)
 
 3. Create queries and migrations in .graphql files (add empty file in project with .graphql extension)
@@ -43,6 +50,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
 4. Create API.swift file (for write Mutation and Query in this file)
 
 5. Add global Apollo intasnce for application
+
    or Create a sperate file for Apollo instance
     
 6. Call Apollo methods in ViewController
