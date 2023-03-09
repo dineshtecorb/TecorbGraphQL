@@ -72,7 +72,7 @@ Mutation In Graphql
 ```
  Write Mutation Api for Graphql
 
-```public final class UserSigninMutation: GraphQLMutation{
+``` public final class UserSigninMutation: GraphQLMutation{
 
     public let operationDefinition =
     """
@@ -102,16 +102,19 @@ Mutation In Graphql
 
     public var variables: GraphQLMap? {
         return ["input": inputs]
-    }    
+    }
+    
     
     public struct Data: GraphQLSelectionSet {
         public static let possibleTypes = ["Mutation"]
         
         
         public static let selections: [GraphQLSelection] = [
-            GraphQLField("signIn", arguments: ["input": GraphQLVariable("input")], type: .object(SignIn.selections)),]
+            GraphQLField("signIn", arguments: ["input": GraphQLVariable("input")], type: .object(SignIn.selections)),
+        ]
         
-    public private(set) var resultMap: ResultMap
+        
+        public private(set) var resultMap: ResultMap
         
         public init(unsafeResultMap: ResultMap) {
             self.resultMap = unsafeResultMap
@@ -175,6 +178,8 @@ Mutation In Graphql
                 resultMap.updateValue(newValue?.resultMap, forKey: "auth")
               }
             }
+            
+
             
             public struct UserDetails: GraphQLSelectionSet {
                 public static let possibleTypes = ["User"]
@@ -281,6 +286,7 @@ Mutation In Graphql
     }
 }
 ```
+
 
  Mutation Api call for Graphql request data response in ViewController
 
