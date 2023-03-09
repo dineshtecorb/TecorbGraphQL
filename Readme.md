@@ -58,8 +58,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
     /** Mutation In Graphql **/
 
   Write mutation for input type
-
-   ``` mutation SignIn($input: SignIn!) {
+``` mutation SignIn($input: SignIn!) {
     signIn(input: $input) {
           user{
                id
@@ -70,7 +69,7 @@ Apollo swift package : https://github.com/apollographql/apollo-ios.git
                }
       }
     }
-    ```
+```
 /** Write Mutation Api for Graphql **/ 
 
 ```public final class UserSigninMutation: GraphQLMutation {
